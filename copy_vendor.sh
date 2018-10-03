@@ -34,5 +34,5 @@ source helpers/remove-unused.sh
 
 # Move build.prop to proper place
 DEVICE=$(grep ro.vendor.product.name $VENDOR_SPARSE/build.prop | cut -d '_' -f2)
-mkdir -p $DEVICE/system
+mkdir -p $DEVICE/vendor
 mv $VENDOR_SPARSE/build.prop $DEVICE/vendor
